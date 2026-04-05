@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Chewy&display=swap");
+@import "tailwindcss";
+
+body {
+  background-image: url("./background-landscape.png");
+  background-position: 50%;
+  background-size: cover;
+}
+
+.text-cartoony-outline {
+  text-shadow:
+    -1px -1px 2px #000000c4,
+    1px -1px 2px #0000001c,
+    -1px 1px 2px #0000001c,
+    1px 1px 2px #0000001c;
+}
+
+.bottom-right-shadow {
+  box-shadow: 12px 12px 0px hsla(227, 76%, 41%, 0.2);
+}
+
+.bottom-right-shadow-sm {
+  box-shadow: 4px 4px 0px hsla(227, 76%, 41%, 0.2);
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: url("./background-portrait.png");
+  }
+}
+
+@theme {
+  /* --color-main: #fff0d6; */
+
+  /* --color-main-blue: #4cb1f2;
+  --color-main-blue-dark: #3171b5; */
+
+  --font-main: "Chewy", "system-ui";
+
+  --animate-wiggle: wiggle 5s ease-in-out infinite;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-1deg);
+    }
+    50% {
+      transform: rotate(1deg);
+    }
+  }
+
+  --animate-wiggle-more: wiggle-more 4s ease-in-out infinite;
+  @keyframes wiggle-more {
+    0%,
+    100% {
+      transform: rotate(-2deg);
+    }
+    50% {
+      transform: rotate(2deg);
+    }
+  }
+
+  --animate-appear: appear 0.3s 0.3s cubic-bezier(0.17, 0.67, 0.41, 1.33) both;
+  --animate-appear-longer-delay: appear 0.3s 0.5s cubic-bezier(0.17, 0.67, 0.41, 1.33) both;
+  @keyframes appear {
+    0% {
+      top: -50px;
+      position: relative;
+    }
+    100% {
+      top: 0px;
+      opacity: 1;
+      position: relative;
+    }
+  }
+}
