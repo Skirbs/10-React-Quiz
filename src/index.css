@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 body {
-  background-image: url("./background-landscape.png");
+  background-image: url("./assets/background-landscape.png");
   background-position: 50%;
   background-size: cover;
 }
@@ -25,7 +25,7 @@ body {
 
 @media (max-width: 768px) {
   body {
-    background-image: url("./background-portrait.png");
+    background-image: url("./assets/background-portrait.png");
   }
 }
 
